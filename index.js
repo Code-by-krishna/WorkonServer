@@ -112,6 +112,25 @@ try {
 }
 
 
+//iterate Array with for-in and for-of loop.
+const Name = ["Amit","Mohit","Mahak","Kiran","Swati"];
+
+for(let x in Name) {
+    console.log(x);
+}
+
+for(let x of Name) {
+    console.log(x);
+}
+
+
+
+
+
+
+
+
+
 
 
 

@@ -97,6 +97,22 @@ else {
 
 
 
+//using try catch block for error handling.
+try {
+    if (number == 0) {
+        console.log("Zero");
+    } else if (number > 0) {
+        console.log("Positive number");
+    } else {
+        console.log("Negative number");
+    }
+} catch (error) {
+    console.log(error);
+    
+}
+
+
+
 
 
 

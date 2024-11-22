@@ -1,5 +1,5 @@
 
-let number = 5;
+let number = 4;
         
 //find a number is posi nagi or zero.
 
@@ -122,6 +122,109 @@ for(let x in Name) {
 for(let x of Name) {
     console.log(x);
 }
+
+
+
+
+
+// Day 5 Functions and closure in js.
+
+function Outer() {
+    let x = 10;
+    function inner() {
+        console.log(x);
+    }
+    inner();
+}
+Outer();
+
+function Outer() {
+    let x = 10;
+    return function inner() {
+        console.log(x);
+    }
+}
+const result2  = Outer();
+result2();
+
+
+function Outer() {
+    let x = 10;
+    function inner() {
+      return  x;
+    }
+    return inner;
+}
+const result3  = Outer();
+console.log(result3())
+
+
+
+// creating a function with function keyword.
+
+function Sum(a,b) {
+    console.log("This is a function");
+    let c = a + b;
+    return c;
+}
+const result4 = Sum(5,7);
+console.log(result4);
+
+
+//Using of Rest Operator.
+
+function Sum(a,b,...data) {
+    console.log(a + b);
+    return data;
+}
+const result = Sum(5,7,8,9,3,5,8);
+console.log(result);
+
+
+//Using spread operator.
+
+const array  = [2,5,8,5,1,8];
+
+function Spread(...data) {
+    console.log(data);
+    data.forEach((res) => console.log(res));
+    
+}
+Spread(...array);
+
+
+
+//using of argument.
+
+function Sum(argument) {
+    console.log(argument);
+}
+Sum([5,7,8,9,3,5,8]);
+
+
+// Arrow function.
+
+const fun = () => {
+    console.log("This is an arrow functon");   
+}
+fun();
+
+
+//IIFE functions.
+
+(function() {
+    console.log("This is IIFE function");
+})();
+
+
+
+
+
+
+
+
+
+
 
 
 
